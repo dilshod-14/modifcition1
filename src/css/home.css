@@ -77,16 +77,21 @@
 
 .homepage .popular-dishes-frame .popular-section .cards-frame {
   width: 100%;
-  margin-top: 43px;
+  margin-top: 30px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap; /* cardlar qator bo‘yicha joylashadi */
+  gap: 20px; /* cardlar orasidagi masofa */
+  justify-content: space-between; /* katta ekranda yonma-yon */
 }
 
 .homepage .popular-dishes-frame .cards-frame .card {
-  min-height: 430px;
-  min-width: 300px;
+  flex: 1 1 calc(25% - 20px); /* 4 ta card sig‘adi */
+  max-width: 280px; /* card juda katta bo‘lib ketmasin */
+  height: 350px;
   cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .homepage .popular-dishes-frame .cards-frame .card .card-cover {
@@ -375,8 +380,8 @@
 }
 
 .homepage .events-frame .events-img {
-  width: 250px;
-  height: 400px;
+  width: 470px;
+  height: 500px;
   display: flex;
   border-radius: 10px;
   background-size: cover;
@@ -390,7 +395,7 @@
   width: 90%;
   height: auto;
   bottom: 5px;
-  background: #9a444f;
+  background: #c780b0;
   box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
   border-radius: 8px;
 }

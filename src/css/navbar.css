@@ -60,7 +60,30 @@
 }
 
 .home-navbar .hover-line a {
-  color: #f8f8ff;
+  color: #fff176; /* och sariq (oltin) */
+  font-weight: 600;
+  text-shadow: 0 0 5px #fff176, 0 0 10px #ffd54f, 0 0 20px #fbc02d;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  z-index: 100;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #c91c10, 0 0 10px #c0af76, 0 0 20px #fbc02d,
+      0 0 30px #fbc02d;
+  }
+  to {
+    text-shadow: 0 0 10px #fff176, 0 0 20px #ffd54f, 0 0 40px #fbc02d,
+      0 0 50px #fbc02d;
+  }
+}
+
+.other-navbar .hover-line a:hover {
+  color: #ffffff; /* hover bo‘lganda oq bo‘lib qoladi */
+}
+
+.home-navbar .hover-line a {
+  color: #99cd7b;
   z-index: 100;
 }
 
@@ -174,7 +197,7 @@
   width: 100%;
   height: 400px;
   display: flex;
-  background: url("/public/img/banner.webp");
+  background: url("/public/img/default.jpg");
   background-size: cover;
 }
 
@@ -192,11 +215,11 @@
 
 .other-navbar .navbar-container .menu .brand-logo {
   width: 125px;
-  height: 30px;
+  height: 80px;
 }
 
 .other-navbar .navbar-container .menu .links {
-  min-width: 700px;
+  min-width: 800px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -218,9 +241,33 @@
   text-decoration: none;
 }
 
-.other-navbar .hover-line a {
-  color: #f8f8ff;
+/* .other-navbar .hover-line a {
+  color: #2e7d32;
   z-index: 100;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+} */
+
+.other-navbar .hover-line a {
+  color: #fff176; /* och sariq (oltin) */
+  font-weight: 600;
+  text-shadow: 0 0 5px #fff176, 0 0 10px #ffd54f, 0 0 20px #fbc02d;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  z-index: 100;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #c91c10, 0 0 10px #c0af76, 0 0 20px #fbc02d,
+      0 0 30px #fbc02d;
+  }
+  to {
+    text-shadow: 0 0 10px #fff176, 0 0 20px #ffd54f, 0 0 40px #fbc02d,
+      0 0 50px #fbc02d;
+  }
+}
+
+.other-navbar .hover-line a:hover {
+  color: #ffffff; /* hover bo‘lganda oq bo‘lib qoladi */
 }
 
 .other-navbar .underline {

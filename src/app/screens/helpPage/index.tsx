@@ -41,6 +41,7 @@ export default function HelpPage() {
           </Box>
           <Stack>
             <Stack className={"help-main-content"}>
+              {/* Terms Section */}
               <TabPanel value={"1"}>
                 <Stack className={"rules-box"}>
                   <Box className={"rules-frame"}>
@@ -50,6 +51,8 @@ export default function HelpPage() {
                   </Box>
                 </Stack>
               </TabPanel>
+
+              {/* FAQ Section */}
               <TabPanel value={"2"}>
                 <Stack className={"accordion-menu"}>
                   {faq.map((value, number) => {
@@ -70,12 +73,17 @@ export default function HelpPage() {
                   })}
                 </Stack>
               </TabPanel>
+
+              {/* Contact Section */}
               <TabPanel value={"3"}>
                 <Stack className={"admin-letter-box"}>
                   <Stack className={"admin-letter-container"}>
                     <Box className={"admin-letter-frame"}>
-                      <span>Contact us!</span>
-                      <p>Fill out below form to send a message!</p>
+                      <span>Contact Flora Flowers!</span>
+                      <p>
+                        Fill out the form below to ask about bouquets, custom
+                        flower orders, or delivery information 🌸
+                      </p>
                     </Box>
                     <form
                       action={"#"}
@@ -99,10 +107,12 @@ export default function HelpPage() {
                         />
                       </div>
                       <div className={"admin-input-box"}>
-                        <label>Message</label>
+                        <label>Your message</label>
                         <textarea
                           name={"memberMsg"}
-                          placeholder={"Your message"}
+                          placeholder={
+                            "Write your message (e.g. custom bouquet request)"
+                          }
                         ></textarea>
                       </div>
                       <Box
@@ -110,7 +120,11 @@ export default function HelpPage() {
                         justifyContent={"flex-end"}
                         sx={{ mt: "30px" }}
                       >
-                        <Button type={"submit"} variant="contained">
+                        <Button
+                          type={"submit"}
+                          variant="contained"
+                          color="success"
+                        >
                           Send
                         </Button>
                       </Box>

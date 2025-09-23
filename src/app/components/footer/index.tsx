@@ -23,9 +23,10 @@ export default function Footer() {
               <img width={"100px"} src={"/icons/flora.png"} />
             </Box>
             <Box className={"foot-desc-txt"}>
-              Focusing on the gourmet Turkish breakfast as well as the youth
-              society, CZN Burak Gurme aims to bring Turkish cuisine back. CZN
-              Burak Gurme creates an illusion with its cuisine.
+              Flora Flowers is dedicated to bringing freshness and beauty into
+              your life. We create elegant bouquets and custom floral
+              arrangements for every occasion — from daily joy to life’s biggest
+              celebrations.
             </Box>
             <Box className="sns-context">
               <img src={"/icons/facebook.svg"} />
@@ -37,10 +38,10 @@ export default function Footer() {
           <Stack sx={{ ml: "288px" }} flexDirection={"row"}>
             <Stack>
               <Box>
-                <Box className={"foot-category-title"}>Bo'limlar</Box>
+                <Box className={"foot-category-title"}>Sections</Box>
                 <Box className={"foot-category-link"}>
                   <Link to="/">Home</Link>
-                  <Link to="/products">Products</Link>
+                  <Link to="/products">Flowers</Link>
                   {authMember && <Link to="/orders">Orders</Link>}
                   <Link to="/help">Help</Link>
                 </Box>
@@ -57,19 +58,19 @@ export default function Footer() {
                 >
                   <Box flexDirection={"row"} className={"find-us"}>
                     <span>L.</span>
-                    <div>Downtown, Dubai</div>
+                    <div>Main Street, Tashkent</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>P.</span>
-                    <div>+971 4 554 7777</div>
+                    <div>+998 90 123 45 67</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>E.</span>
-                    <div>devexuz@gmail.com</div>
+                    <div>flora@example.com</div>
                   </Box>
                   <Box className={"find-us"}>
                     <span>H.</span>
-                    <div>Visit 24 hours</div>
+                    <div>Open 9:00 - 21:00</div>
                   </Box>
                 </Box>
               </Box>
@@ -81,7 +82,7 @@ export default function Footer() {
           sx={{ mt: "80px" }}
         ></Stack>
         <Stack className={"copyright-txt"}>
-          © Copyright Devex Global, All rights reserved.
+          © Copyright Flora Flowers, All rights reserved.
         </Stack>
       </Container>
     </Footers>

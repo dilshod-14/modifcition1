@@ -22,10 +22,10 @@ import { CartItem } from "../../../lib/types/search";
 
 /** REDUX SLICE & SELECTOR */
 const actionDispatch = (dispatch: Dispatch) => ({
-  setProducts: (data: Product[]) => dispatch(setProducts(data)),
+  setProducts: (data: Product[]) => dispatch(setProducts(data))
 });
 const productsRetriever = createSelector(retrieveProducts, (products) => ({
-  products,
+  products
 }));
 
 interface ProductsProps {
@@ -41,7 +41,7 @@ export default function Products(props: ProductsProps) {
     limit: 8,
     order: "createdAt",
     productCollection: ProductCollection.LOTUS,
-    search: "",
+    search: ""
   });
   const [searchText, setSearchText] = useState<string>("");
   const history = useHistory();
@@ -178,8 +178,7 @@ export default function Products(props: ProductsProps) {
                 <Button
                   variant={"contained"}
                   color={
-                    productSearch.productCollection ===
-                    ProductCollection.ROSE
+                    productSearch.productCollection === ProductCollection.ROSE
                       ? "primary"
                       : "secondary"
                   }
@@ -258,7 +257,7 @@ export default function Products(props: ProductsProps) {
                               quantity: 1,
                               name: product.productName,
                               price: product.productPrice,
-                              image: product.productImages[0],
+                              image: product.productImages[0]
                             });
                             e.stopPropagation();
                           }}
@@ -276,7 +275,7 @@ export default function Products(props: ProductsProps) {
                             <RemoveRedEyeIcon
                               sx={{
                                 color:
-                                  product.productViews === 0 ? "gray" : "white",
+                                  product.productViews === 0 ? "gray" : "white"
                               }}
                             />
                           </Badge>
@@ -312,7 +311,7 @@ export default function Products(props: ProductsProps) {
                 <PaginationItem
                   components={{
                     previous: ArrowBackIcon,
-                    next: ArrowForwardIcon,
+                    next: ArrowForwardIcon
                   }}
                   {...item}
                   color={"secondary"}
@@ -329,16 +328,16 @@ export default function Products(props: ProductsProps) {
           <Box className={"category-title"}>Our Family Brands</Box>
           <Stack className={"brand-list"}>
             <Box className={"review-box"}>
-              <img src={"/img/gurme.webp"} />
+              <img src={"/img/flora1.png"} />
             </Box>
             <Box className={"review-box"}>
-              <img src={"/img/sweets.webp"} />
+              <img src={"/img/flora1.png"} />
             </Box>
             <Box className={"review-box"}>
-              <img src={"/img/seafood.webp"} />
+              <img src={"/img/flora1.png"} />
             </Box>
             <Box className={"review-box"}>
-              <img src={"/img/doner.webp"} />
+              <img src={"/img/flora1.png"} />
             </Box>
           </Stack>
         </Container>
