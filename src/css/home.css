@@ -8,7 +8,7 @@
 .homepage .static-frame {
   width: 100%;
   height: 236px;
-  background: #343434;
+  background: url("/public/img/statics.jpg");
 }
 
 .homepage .static-frame .info {
@@ -308,7 +308,7 @@
 
 .homepage .events-frame {
   width: 100%;
-  height: 745px;
+  height: auto;
   background: #f8f8ff;
   display: flex;
 }
@@ -375,8 +375,8 @@
 }
 
 .homepage .events-frame .events-img {
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 400px;
   display: flex;
   border-radius: 10px;
   background-size: cover;
@@ -390,7 +390,7 @@
   width: 90%;
   height: auto;
   bottom: 5px;
-  background: #f8f8ff;
+  background: #9a444f;
   box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
   border-radius: 8px;
 }

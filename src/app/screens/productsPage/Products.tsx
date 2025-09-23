@@ -40,7 +40,7 @@ export default function Products(props: ProductsProps) {
     page: 1,
     limit: 8,
     order: "createdAt",
-    productCollection: ProductCollection.DISH,
+    productCollection: ProductCollection.LOTUS,
     search: "",
   });
   const [searchText, setSearchText] = useState<string>("");
@@ -95,7 +95,7 @@ export default function Products(props: ProductsProps) {
         <Stack flexDirection={"column"} alignItems={"center"}>
           <Stack className={"avatar-big-box"}>
             <Stack className={"top-text"}>
-              <p>Burak Restaurant</p>
+              <p>Flora Flowers</p>
               <Stack className={"single-search-big-box"}>
                 <input
                   type={"search"}
@@ -179,54 +179,54 @@ export default function Products(props: ProductsProps) {
                   variant={"contained"}
                   color={
                     productSearch.productCollection ===
-                    ProductCollection.DESSERT
+                    ProductCollection.ROSE
                       ? "primary"
                       : "secondary"
                   }
                   onClick={() =>
-                    searchCollectionHandler(ProductCollection.DESSERT)
+                    searchCollectionHandler(ProductCollection.ROSE)
                   }
                 >
-                  Dessert
+                  ROSE
                 </Button>
                 <Button
                   variant={"contained"}
                   color={
-                    productSearch.productCollection === ProductCollection.DRINK
+                    productSearch.productCollection === ProductCollection.TULIP
                       ? "primary"
                       : "secondary"
                   }
                   onClick={() =>
-                    searchCollectionHandler(ProductCollection.DRINK)
+                    searchCollectionHandler(ProductCollection.TULIP)
                   }
                 >
-                  Drink
+                  TULIP
                 </Button>
                 <Button
                   variant={"contained"}
                   color={
-                    productSearch.productCollection === ProductCollection.SALAD
+                    productSearch.productCollection === ProductCollection.DAISY
                       ? "primary"
                       : "secondary"
                   }
                   onClick={() =>
-                    searchCollectionHandler(ProductCollection.SALAD)
+                    searchCollectionHandler(ProductCollection.DAISY)
                   }
                 >
-                  Salad
+                  DAISY
                 </Button>
                 <Button
                   variant={"contained"}
                   color={
-                    productSearch.productCollection === ProductCollection.DISH
+                    productSearch.productCollection === ProductCollection.LOTUS
                       ? "primary"
                       : "secondary"
                   }
                   onClick={() =>
-                    searchCollectionHandler(ProductCollection.DISH)
+                    searchCollectionHandler(ProductCollection.LOTUS)
                   }
                 >
-                  Dish
+                  LOTUS
                 </Button>
               </div>
             </Stack>
@@ -236,7 +236,7 @@ export default function Products(props: ProductsProps) {
                 products.map((product: Product) => {
                   const imagePath = `${serverApi}/${product.productImages[0]}`;
                   const sizeVolume =
-                    product.productCollection === ProductCollection.DRINK
+                    product.productCollection === ProductCollection.TULIP
                       ? product.productVolume + " litre"
                       : product.productSize + " size";
                   return (

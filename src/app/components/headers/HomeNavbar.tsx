@@ -6,7 +6,7 @@ import {
   ListItemIcon,
   Menu,
   MenuItem,
-  Stack,
+  Stack
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
@@ -41,7 +41,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
     handleLogoutClick,
     anchorEl,
     handleCloseLogout,
-    handleLogoutRequest,
+    handleLogoutRequest
   } = props;
   const { authMember } = useGlobals();
 
@@ -49,11 +49,15 @@ export default function HomeNavbar(props: HomeNavbarProps) {
 
   return (
     <div className="home-navbar">
+      <video autoPlay muted loop playsInline className="background-video">
+        <source src="video/orqabanner.mp4" type="video/mp4" />
+      </video>
+
       <Container className="navbar-container">
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg" />
+              <img className="brand-logo" src="/icons/flora.svg" />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -64,7 +68,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
             </Box>
             <Box className={"hover-line"}>
               <NavLink to="/products" activeClassName={"underline"}>
-                Products
+                Flower
               </NavLink>
             </Box>
             {authMember ? (
@@ -133,7 +137,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                     width: 32,
                     height: 32,
                     ml: -0.5,
-                    mr: 1,
+                    mr: 1
                   },
                   "&:before": {
                     content: '""',
@@ -145,9 +149,9 @@ export default function HomeNavbar(props: HomeNavbarProps) {
                     height: 10,
                     bgcolor: "background.paper",
                     transform: "translateY(-50%) rotate(45deg)",
-                    zIndex: 0,
-                  },
-                },
+                    zIndex: 0
+                  }
+                }
               }}
               transformOrigin={{ horizontal: "right", vertical: "top" }}
               anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
@@ -164,10 +168,10 @@ export default function HomeNavbar(props: HomeNavbarProps) {
         <Stack className={"header-frame"}>
           <Stack className={"detail"}>
             <Box className={"head-main-txt"}>
-              World's Most Delicious Cousine
+              Where flowers bloom, so does hope
             </Box>
-            <Box className={"wel-txt"}>The Choice, not just a choice</Box>
-            <Box className={"service-txt"}>24 hours service</Box>
+            <Box className={"wel-txt"}>"Let flowers ignite your senses."</Box>
+            <Box className={"service-txt"}>Blooming 24/7e</Box>
             <Box className={"signup"}>
               {!authMember ? (
                 <Button

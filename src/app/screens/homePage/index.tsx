@@ -14,19 +14,19 @@ import { ProductCollection } from "../../../lib/enums/product.enum";
 import MemberService from "../../services/MemberService";
 import { Member } from "../../../lib/types/member";
 import "../../../css/home.css";
+import { Console } from "console";
 
 /** REDUX SLICE & SELECTOR */
 const actionDispatch = (dispatch: Dispatch) => ({
   setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data)),
   setNewDishes: (data: Product[]) => dispatch(setNewDishes(data)),
-  setTopUsers: (data: Member[]) => dispatch(setTopUsers(data)),
+  setTopUsers: (data: Member[]) => dispatch(setTopUsers(data))
 });
 
 export default function HomePage() {
   const { setPopularDishes, setNewDishes, setTopUsers } = actionDispatch(
     useDispatch()
   );
-
   useEffect(() => {
     const product = new ProductService();
     product
@@ -34,7 +34,7 @@ export default function HomePage() {
         page: 1,
         limit: 4,
         order: "productViews",
-        productCollection: ProductCollection.DISH,
+        productCollection: ProductCollection.LOTUS
       })
       .then((data) => {
         setPopularDishes(data);
@@ -45,7 +45,7 @@ export default function HomePage() {
       .getProducts({
         page: 1,
         limit: 4,
-        order: "createdAt",
+        order: "createdAt"
       })
       .then((data) => setNewDishes(data))
       .catch((err) => console.log(err));

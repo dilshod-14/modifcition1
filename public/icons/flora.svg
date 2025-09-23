@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250">
+  <!-- Yuqori barg -->
+  <path d="M150 30c22 26 38 54 38 80 0 32-20 56-38 56s-38-24-38-56c0-26 16-54 38-80z" fill="#E91E63" stroke="#AD1457" stroke-width="4"></path>
+  
+  <!-- Chap barg -->
+  <path d="M80 100c30 6 52 18 64 34 14 20 8 42-8 54-14 10-38 8-56-10-18-18-28-48 0-78z" fill="#4CAF50" stroke="#2E7D32" stroke-width="4"></path>
+  
+  <!-- O‘ng barg -->
+  <path d="M220 100c-30 6-52 18-64 34-14 20-8 42 8 54 14 10 38 8 56-10 18-18 28-48 0-78z" fill="#4CAF50" stroke="#2E7D32" stroke-width="4"></path>
+  
+  <!-- Pastki chap barg -->
+  <path d="M100 160c20 4 34 12 42 22 10 14 4 28-6 36-12 8-28 6-40-8-12-14-18-34 4-50z" fill="#2196F3" stroke="#1565C0" stroke-width="3"></path>
+  
+  <!-- Pastki o‘ng barg -->
+  <path d="M200 160c-20 4-34 12-42 22-10 14-4 28 6 36 12 8 28 6 40-8 12-14 18-34-4-50z" fill="#2196F3" stroke="#1565C0" stroke-width="3"></path>
+  
+  <!-- Matn -->
+  <text x="50%" y="235" text-anchor="middle" font-size="36" font-family="Georgia, serif" fill="#FFC107" font-weight="bold">
+    Flora Flowers
+  </text>
+</svg>

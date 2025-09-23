@@ -5,7 +5,7 @@ import {
   ListItemIcon,
   Menu,
   MenuItem,
-  Stack,
+  Stack
 } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Basket from "./Basket";
@@ -40,7 +40,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
     handleLogoutClick,
     anchorEl,
     handleCloseLogout,
-    handleLogoutRequest,
+    handleLogoutRequest
   } = props;
   const { authMember } = useGlobals();
 
@@ -50,7 +50,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/burak.svg" />
+              <img className="brand-logo" src="/icons/flora.svg" />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -128,7 +128,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                     width: 32,
                     height: 32,
                     ml: -0.5,
-                    mr: 1,
+                    mr: 1
                   },
                   "&:before": {
                     content: '""',
@@ -140,9 +140,9 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                     height: 10,
                     bgcolor: "background.paper",
                     transform: "translateY(-50%) rotate(45deg)",
-                    zIndex: 0,
-                  },
-                },
+                    zIndex: 0
+                  }
+                }
               }}
               transformOrigin={{ horizontal: "right", vertical: "top" }}
               anchorOrigin={{ horizontal: "right", vertical: "bottom" }}

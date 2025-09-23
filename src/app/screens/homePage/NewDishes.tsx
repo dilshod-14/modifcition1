@@ -16,7 +16,7 @@ import { ProductCollection } from "../../../lib/enums/product.enum";
 
 /** REDUX SLICE & SELECTOR */
 const newDishesRetriever = createSelector(retrieveNewDishes, (newDishes) => ({
-  newDishes,
+  newDishes
 }));
 
 export default function NewDishes() {
@@ -35,7 +35,7 @@ export default function NewDishes() {
                 newDishes.map((product: Product) => {
                   const imagePath = `${serverApi}/${product.productImages[0]}`;
                   const sizeVolume =
-                    product.productCollection === ProductCollection.DRINK
+                    product.productCollection === ProductCollection.TULIP
                       ? product.productVolume + "l"
                       : product.productSize + " size";
                   return (
