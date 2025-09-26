@@ -33,6 +33,7 @@ export interface LoginInput {
 }
 
 export interface MemberUpdateInput {
+  memberStatus?: MemberStatus;
   memberNick?: string;
   memberPhone?: string;
   memberPassword?: string;

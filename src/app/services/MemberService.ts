@@ -4,7 +4,7 @@ import {
   LoginInput,
   Member,
   MemberInput,
-  MemberUpdateInput,
+  MemberUpdateInput
 } from "../../lib/types/member";
 
 class MemberService {
@@ -18,11 +18,10 @@ class MemberService {
     try {
       const url = this.path + "/member/top-users";
       const result = await axios.get(url);
-      console.log("getTopUsers:", result);
 
       return result.data;
     } catch (err) {
-      console.log("Error, getTopUsers:", err);
+      console.log("Erros, getTopUsers:", err);
       throw err;
     }
   }
@@ -31,12 +30,11 @@ class MemberService {
     try {
       const url = this.path + "/member/restaurant";
       const result = await axios.get(url);
-      console.log("getRestaurant:", result);
 
-      const restaurant: Member = result.data;
+      const restaurant = result.data;
       return restaurant;
     } catch (err) {
-      console.log("Error, getRestaurant:", err);
+      console.log("Erros, getRestaurant:", err);
       throw err;
     }
   }
@@ -102,8 +100,8 @@ class MemberService {
         data: formData,
         withCredentials: true,
         headers: {
-          "Content-Type": "multipart/form-data",
-        },
+          "Content-Type": "multipart/form-data"
+        }
       });
       console.log("updateMember:", result);
 

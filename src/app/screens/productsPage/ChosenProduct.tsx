@@ -26,18 +26,18 @@ import { CartItem } from "../../../lib/types/search";
 /** REDUX SLICE & SELECTOR */
 const actionDispatch = (dispatch: Dispatch) => ({
   setRestaurant: (data: Member) => dispatch(setRestaurant(data)),
-  setChosenProduct: (data: Product) => dispatch(setChosenProduct(data)),
+  setChosenProduct: (data: Product) => dispatch(setChosenProduct(data))
 });
 const chosenProductRetriever = createSelector(
   retrieveChosenProduct,
   (chosenProduct) => ({
-    chosenProduct,
+    chosenProduct
   })
 );
 const restaurantRetriever = createSelector(
   retrieveRestaurant,
   (restaurant) => ({
-    restaurant,
+    restaurant
   })
 );
 
@@ -83,7 +83,7 @@ export default function ChosenProduct(props: ChosenProductProps) {
               const imagePath = `${serverApi}/${ele}`;
               return (
                 <SwiperSlide key={index}>
-                  <img className="slider-image" src={imagePath} />
+                  <img className="slider-image" src={imagePath} alt={""} />
                 </SwiperSlide>
               );
             })}
@@ -124,7 +124,7 @@ export default function ChosenProduct(props: ChosenProductProps) {
                     quantity: 1,
                     name: chosenProduct.productName,
                     price: chosenProduct.productPrice,
-                    image: chosenProduct.productImages[0],
+                    image: chosenProduct.productImages[0]
                   });
                   e.stopPropagation();
                 }}

@@ -23,7 +23,7 @@ import { MemberType } from "../../../lib/enums/member.enum";
 const actionDispatch = (dispatch: Dispatch) => ({
   setPausedOrders: (data: Order[]) => dispatch(setPausedOrders(data)),
   setProcessOrders: (data: Order[]) => dispatch(setProcessOrders(data)),
-  setFinishedOrders: (data: Order[]) => dispatch(setFinishedOrders(data)),
+  setFinishedOrders: (data: Order[]) => dispatch(setFinishedOrders(data))
 });
 
 export default function OrdersPage() {
@@ -35,7 +35,7 @@ export default function OrdersPage() {
   const [orderInquiry, setOrderInquiry] = useState<OrderInquiry>({
     page: 1,
     limit: 5,
-    orderStatus: OrderStatus.PAUSE,
+    orderStatus: OrderStatus.PAUSE
   });
 
   useEffect(() => {
@@ -102,6 +102,7 @@ export default function OrdersPage() {
                       : "/icons/default-user.svg"
                   }
                   className={"order-user-avatar"}
+                  alt={authMember?.memberNick || "user avatar"}
                 />
                 <div className={"order-user-icon-box"}>
                   <img
@@ -111,6 +112,7 @@ export default function OrdersPage() {
                         : "/icons/user-badge.svg"
                     }
                     className={"order-user-prof-img"}
+                    alt={authMember?.memberType || "user type"}
                   />
                 </div>
               </div>
@@ -146,7 +148,7 @@ export default function OrdersPage() {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "space-between",
+                justifyContent: "space-between"
               }}
             >
               <input
@@ -169,10 +171,10 @@ export default function OrdersPage() {
               className={"card-input"}
             />
             <div className={"cards-box"}>
-              <img src={"/icons/western-card.svg"} />
-              <img src={"/icons/master-card.svg"} />
-              <img src={"/icons/paypal-card.svg"} />
-              <img src={"/icons/visa-card.svg"} />
+              <img src={"/icons/western-card.svg"} alt="western card" />
+              <img src={"/icons/master-card.svg"} alt="master card" />
+              <img src={"/icons/paypal-card.svg"} alt="paypal card" />
+              <img src={"/icons/visa-card.svg"} alt="visa card" />
             </div>
           </Box>
         </Stack>

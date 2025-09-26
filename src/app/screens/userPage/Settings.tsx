@@ -5,12 +5,13 @@ import { useGlobals } from "../../hooks/useGlobals";
 import { useState } from "react";
 import { MemberUpdateInput } from "../../../lib/types/member";
 import { T } from "../../../lib/types/common";
-import {
-  sweetErrorHandling,
-  sweetTopSmallSuccessAlert,
-} from "../../../lib/sweetAlert";
+
 import { Messages, serverApi } from "../../../lib/config";
 import MemberService from "../../services/MemberService";
+import {
+  sweetErrorHandling,
+  sweetTopSmallSuccessAlert
+} from "../../../lib/sweetAlert";
 
 export function Settings() {
   const { authMember, setAuthMember } = useGlobals();
@@ -19,34 +20,33 @@ export function Settings() {
       ? `${serverApi}/${authMember.memberImage}`
       : "/icons/default-user.svg"
   );
+
   const [memberUpdateInput, setMemberUpdateInput] = useState<MemberUpdateInput>(
     {
       memberNick: authMember?.memberNick,
       memberPhone: authMember?.memberPhone,
       memberAddress: authMember?.memberAddress,
       memberDesc: authMember?.memberDesc,
-      memberImage: authMember?.memberImage,
+      memberImage: authMember?.memberImage
     }
   );
-
-  /** HANDLERS **/
 
   const memberNickHandler = (e: T) => {
     memberUpdateInput.memberNick = e.target.value;
     setMemberUpdateInput({ ...memberUpdateInput });
   };
 
-  const memberPhoneHandler = (e: T) => {
+  const memberPhonekHandler = (e: T) => {
     memberUpdateInput.memberPhone = e.target.value;
     setMemberUpdateInput({ ...memberUpdateInput });
   };
 
-  const memberAddressHandler = (e: T) => {
+  const memberAddresskHandler = (e: T) => {
     memberUpdateInput.memberAddress = e.target.value;
     setMemberUpdateInput({ ...memberUpdateInput });
   };
 
-  const memberDescriptionHandler = (e: T) => {
+  const memberDescriptionkHandler = (e: T) => {
     memberUpdateInput.memberDesc = e.target.value;
     setMemberUpdateInput({ ...memberUpdateInput });
   };
@@ -62,7 +62,6 @@ export function Settings() {
       ) {
         throw new Error(Messages.error3);
       }
-
       const member = new MemberService();
       const result = await member.updateMember(memberUpdateInput);
       setAuthMember(result);
@@ -79,7 +78,6 @@ export function Settings() {
     console.log("file:", file);
     const fileType = file.type,
       validateImageTypes = ["image/jpg", "image/jpeg", "image/png"];
-
     if (!validateImageTypes.includes(fileType)) {
       sweetErrorHandling(Messages.error5).then();
     } else {
@@ -128,7 +126,7 @@ export function Settings() {
             placeholder={authMember?.memberPhone ?? "no phone"}
             value={memberUpdateInput.memberPhone}
             name="memberPhone"
-            onChange={memberPhoneHandler}
+            onChange={memberPhonekHandler}
           />
         </div>
         <div className={"short-input"}>
@@ -138,12 +136,12 @@ export function Settings() {
             type="text"
             placeholder={
               authMember?.memberAddress
-                ? authMember.memberAddress
+                ? authMember?.memberAddress
                 : "no address"
             }
             value={memberUpdateInput.memberAddress}
             name="memberAddress"
-            onChange={memberAddressHandler}
+            onChange={memberAddresskHandler}
           />
         </div>
       </Box>
@@ -157,7 +155,7 @@ export function Settings() {
             }
             value={memberUpdateInput.memberDesc}
             name="memberDesc"
-            onChange={memberDescriptionHandler}
+            onChange={memberDescriptionkHandler}
           />
         </div>
       </Box>

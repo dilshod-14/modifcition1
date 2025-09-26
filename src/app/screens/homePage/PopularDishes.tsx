@@ -37,7 +37,10 @@ export default function PopularDishes() {
                   <CssVarsProvider key={product._id}>
                     <Card className={"card"}>
                       <CardCover>
-                        <img src={imagePath} alt="" />
+                        <img
+                          src={imagePath}
+                          alt={product.productName || "popular flower"}
+                        />
                       </CardCover>
                       <CardCover className={"card-cover"} />
                       <CardContent sx={{ justifyContent: "flex-end" }}>
@@ -58,7 +61,7 @@ export default function PopularDishes() {
                               fontWeight: "md",
                               color: "neutral.300",
                               alignItems: "center",
-                              display: "flex",
+                              display: "flex"
                             }}
                           >
                             {product.productViews}
@@ -75,7 +78,7 @@ export default function PopularDishes() {
                           py: 1.5,
                           px: "var(--Card-padding)",
                           borderTop: "1px solid",
-                          height: "60px",
+                          height: "60px"
                         }}
                       >
                         <Typography

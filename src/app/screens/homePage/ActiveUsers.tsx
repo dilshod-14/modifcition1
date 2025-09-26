@@ -11,7 +11,7 @@ import { Member } from "../../../lib/types/member";
 
 /** REDUX SLICE & SELECTOR */
 const topUsersRetriever = createSelector(retrieveTopUsers, (topUsers) => ({
-  topUsers,
+  topUsers
 }));
 
 export default function ActiveUsers() {
@@ -35,7 +35,14 @@ export default function ActiveUsers() {
                     >
                       <CardOverflow>
                         <AspectRatio ratio="1">
-                          <img src={imagePath} alt="" />
+                          <img
+                            src={
+                              member.memberImage
+                                ? `${serverApi}/${member.memberImage}`
+                                : "/icons/default-user.svg"
+                            }
+                            alt={member.memberNick || "user avatar"}
+                          />
                         </AspectRatio>
                       </CardOverflow>
                       <CardOverflow>

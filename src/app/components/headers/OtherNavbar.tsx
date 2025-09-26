@@ -50,7 +50,11 @@ export default function OtherNavbar(props: OtherNavbarProps) {
         <Stack className="menu">
           <Box>
             <NavLink to="/">
-              <img className="brand-logo" src="/icons/flora.svg" />
+              <img
+                className="brand-logo"
+                src="/icons/flora.svg"
+                alt="Flora brand logo"
+              />
             </NavLink>
           </Box>
           <Stack className="links">
@@ -107,7 +111,8 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                     ? `${serverApi}/${authMember?.memberImage}`
                     : "/icons/default-user.svg"
                 }
-                aria-haspopup={"true"}
+                alt={authMember?.memberNick || "user avatar"}
+                aria-haspopup="true"
                 onClick={handleLogoutClick}
               />
             )}
